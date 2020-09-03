@@ -1,14 +1,11 @@
-ttt_board = ["","X"," "," "," "," "," "," "," "]
-puts "Enter a position on the board 1-9:"
-user_input = gets.chomp
-number_entered = user_input.to_i - 1
+
 # code your #valid_move? method here
 def valid_move?(board, index)
-  # if index.between?(1,9)
-  #   if !position_taken?(board, index)
-  #     true
-  #   end
-  # end
+   if index.between?(1,9)
+     if !position_taken?(board, index)
+       true
+     end
+   end
 
   index.between?(0,8) && !position_taken?(board, index)
 end
